@@ -31,6 +31,7 @@ ssh pi@192.168.1.50
 
 ## Configuracion y ejecucion de la aplicacion
 *Nota*
+
 **Si no tienes docker clona este repositorio y ejecuta el script install_docker**
 ```bash
 ./install_docker.sh 
