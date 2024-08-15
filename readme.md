@@ -22,7 +22,7 @@ Este proyecto es una aplicación que se ejecuta en una Raspberry Pi. A continuac
 ```bash
 ssh pi@<IP_DE_TU_RASPBERRY_PI>
 
-//Ejemplo:
+#Ejemplo:
 ssh pi@192.168.1.50
 
 ```
@@ -33,23 +33,35 @@ ssh pi@192.168.1.50
 
 2. Descarga la imagen en la raspberry pi
 ```bash
-    sudo docker pull fdavid04/test2:latest
+sudo docker pull fdavid04/test2:latest
 ```
 3. Ejecuta la imagen
 
 ```bash
-    sudo docker run --privileged -d -p 5000:5000 fdavid04/test2:latest
+sudo docker run --privileged -d -p 5000:5000 fdavid04/test2:latest
 ```
 ## Ejecucion del servidor backend
-![Servidor backend](server)
+[Servidor backend](server)
 
 4. Inicia el servidor
 ```bash
-    npm start
+npm run dev
 ```
 
 ## Ejecucion de la app frontend
-![App frontend](frontend/mi-app-react/)
+[App frontend](frontend/mi-app-react/)
+
+**Modo Desarrollo**
+```bash
+npm run dev
+```
+**Produccion**
+```bash
+npm start
+```
+
+
+
 
 
 
