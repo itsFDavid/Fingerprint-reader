@@ -41,7 +41,7 @@ sudo docker pull fdavid04/test2:latest
 sudo docker run --privileged -d -p 5000:5000 fdavid04/test2:latest
 ```
 ## Ejecucion del servidor backend
-- **Carpeta:**[Servidor backend](server)
+- **Carpeta:**  [Servidor backend](server)
 
 4. Inicia el servidor
 ```bash
@@ -49,7 +49,7 @@ npm run dev
 ```
 
 ## Ejecucion de la app frontend
-- **Carpeta:**[App frontend](frontend/mi-app-react/)
+- **Carpeta:**  [App frontend](frontend/mi-app-react/)
 
 **Modo Desarrollo**
 ```bash
