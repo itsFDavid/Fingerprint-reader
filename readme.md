@@ -30,6 +30,11 @@ ssh pi@192.168.1.50
 **Ten en cuenta que el usuario y la ip puede variar de acuerdo a tu configuracion**
 
 ## Configuracion y ejecucion de la aplicacion
+*Nota*
+**Si no tienes docker clona este repositorio y ejecuta el script install_docker**
+```bash
+./install_docker.sh 
+```
 
 2. Descarga la imagen en la raspberry pi
 ```bash
