@@ -199,25 +199,23 @@ def fingerprint_check_folder():
 
     print("Buscando coincidencias en la carpeta...", end="")
     found_match = False
+    matched_filename = None
 
     for filename in os.listdir(FINGERPRINT_FOLDER):
         if filename.endswith(".dat"):
             file_path = os.path.join(FINGERPRINT_FOLDER, filename)
-            print(f"Comparando con {file_path}...", end="")
             with open(file_path, "rb") as file:
                 data = file.read()
             finger.send_fpdata(list(data), "char", 2)
             i = finger.compare_templates()
             if i == adafruit_fingerprint.OK:
-                print("¡Huella dactilar coincide con la plantilla en el archivo!")
+                matched_filename = filename
                 found_match = True
-                break
-            if i == adafruit_fingerprint.NOMATCH:
-                print("No coincide con esta plantilla.")
-            else:
-                print("Error al comparar")
+                break  # Detener la búsqueda después de encontrar una coincidencia
 
-    if not found_match:
+    if found_match:
+        print(f"¡Huella dactilar coincide con la plantilla en el archivo {matched_filename}!")
+    else:
         print("No se encontró ninguna coincidencia.")
 
     return found_match
